@@ -1,15 +1,9 @@
 /**
  * Convert group name, token name and possible prefix into camelCased string, joining everything together
  */
-let latestTokenGroup
-
 Pulsar.registerFunction(
   "readableVariableName",
   function (token, tokenGroup, prefix) {
-    
-    const tokenGroupChanged = latestTokenGroup && latestTokenGroup !== tokenGroup
-    latestTokenGroup = tokenGroup
-
     // Create array with all path segments and token name at the end
     const segments = [...tokenGroup.path];
     // if (!tokenGroup.isRoot || !tokenGroup.isNonVirtualRoot) {
@@ -37,7 +31,7 @@ Pulsar.registerFunction(
       sentence = "_" + sentence;
     }
 
-    return (tokenGroupChanged ? '\n' : '') + sentence;
+    return sentence;
   }
 );
 
