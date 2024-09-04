@@ -6,9 +6,9 @@ Pulsar.registerFunction(
   function (token, tokenGroup, prefix) {
     // Create array with all path segments and token name at the end
     const segments = [...tokenGroup.path];
-    if (!tokenGroup.isRoot || !tokenGroup.isNonVirtualRoot) {
-      segments.push(tokenGroup.name);
-    }
+    // if (!tokenGroup.isRoot || !tokenGroup.isNonVirtualRoot) {
+    //   segments.push(tokenGroup.name);
+    // }
     segments.push(token.name);
 
     if (prefix && prefix.length > 0) {
@@ -21,7 +21,7 @@ Pulsar.registerFunction(
     // camelcase string from all segments
     sentence = sentence
       .toLowerCase()
-      .replace(/[^a-zA-Z0-9]+(.)/g, (m, chr) => chr.toUpperCase());
+      .replace(/[^a-zA-Z0-9]+(.)/g, (m, chr) => '-' + chr);
 
     // only allow letters, digits, underscore and hyphen
     sentence = sentence.replace(/[^a-zA-Z0-9_-]/g, "_");
@@ -61,12 +61,12 @@ Pulsar.registerFunction("gradientAngle", function (from, to) {
  * Prefixes: Add prefix for each category of the tokens. For example, all colors can start with "color, if needed"
  */
 Pulsar.registerPayload("behavior", {
-  colorTokenPrefix: "color",
-  borderTokenPrefix: "border",
-  gradientTokenPrefix: "gradient",
-  measureTokenPrefix: "measure",
-  shadowTokenPrefix: "shadow",
-  typographyTokenPrefix: "typography",
+  colorTokenPrefix: "jdx-color",
+  borderTokenPrefix: "jdx-border",
+  gradientTokenPrefix: "jdx-gradient",
+  measureTokenPrefix: "jdx-measure",
+  shadowTokenPrefix: "jdx-shadow",
+  typographyTokenPrefix: "jdx-typography",
 });
 
 /** Describe complex shadow token */
