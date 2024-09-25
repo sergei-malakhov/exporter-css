@@ -1,6 +1,6 @@
-@import url(colors.css);
-@import url(measures.css);
-@import url(borders.css);
-@import url(gradients.css);
-@import url(shadows.css);
-@import url(typography.css);
+@import url(colors.module.css);
+@import url(measures.module.css);
+@import url(borders.module.css);
+@import url(gradients.module.css);
+@import url(shadows.module.css);
+@import url(typography.module.css);
