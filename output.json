@@ -21,10 +21,6 @@
             "write_to": "shadows.module.css"
         },
         {
-            "invoke": "typography.pr",
-            "write_to": "typography.module.css"
-        },
-        {
             "invoke": "index-file.pr",
             "write_to": "all.module.css"
         }

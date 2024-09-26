@@ -3,4 +3,3 @@
 @import url(borders.module.css);
 @import url(gradients.module.css);
 @import url(shadows.module.css);
-@import url(typography.module.css);
