@@ -141,9 +141,9 @@ function measureTypeIntoReadableUnit(type) {
 
 function getFormattedRGB(colorValue) {
   if (colorValue.a === 0) {
-    return `rgb(${colorValue.r},${colorValue.g},${colorValue.b})`;
+    return `rgb(${colorValue.r}, ${colorValue.g}, ${colorValue.b})`;
   } else {
     const opacity = Math.round((colorValue.a / 255) * 100) / 100;
-    return `rgba(${colorValue.r},${colorValue.g},${colorValue.b},${opacity})`;
+    return `rgba(${colorValue.r}, ${colorValue.g}, ${colorValue.b}, ${opacity})`;
   }
 }

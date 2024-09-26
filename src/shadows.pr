@@ -4,6 +4,7 @@
 {[ if (!token.isVirtual) ]}
     {[ inject "rendered-token-var" context token /]}
 
+
 {[/]}
 {[/]}
 }
