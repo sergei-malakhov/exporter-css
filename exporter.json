@@ -2,11 +2,10 @@
   "id": "jedox.css",
   "name": "Jedox CSS",
   "description": "Jedox CSS token and style exporter",
-  "author": "Ivan Terpugov & Jiri Trecak",
-  "organization": "Supernova",
+  "author": "Sergei",
   "homepage": "https://supernova.io",
   "source_dir": "src",
-  "version": "0.0.4",
+  "version": "1.0.0",
   "usesBrands": true,
   "config": {
     "sources": "sources.json",
