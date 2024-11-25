@@ -6,7 +6,7 @@ Pulsar.registerFunction(
   function (token, tokenGroup, prefix) {
     // Create array with all path segments and token name at the end
     const segments = [...tokenGroup.path];
-    if (!tokenGroup.isRoot || !tokenGroup.isNonVirtualRoot) {
+    if ((!tokenGroup.isRoot || !tokenGroup.isNonVirtualRoot) && !token.name.toLowerCase().startsWith(tokenGroup.name?.toLowerCase())) {
       segments.push(tokenGroup.name);
     }
     segments.push(token.name);
