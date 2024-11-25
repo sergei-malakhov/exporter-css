@@ -6,9 +6,9 @@ Pulsar.registerFunction(
   function (token, tokenGroup, prefix) {
     // Create array with all path segments and token name at the end
     const segments = [...tokenGroup.path];
-    // if (!tokenGroup.isRoot || !tokenGroup.isNonVirtualRoot) {
-    //   segments.push(tokenGroup.name);
-    // }
+    if (!tokenGroup.isRoot || !tokenGroup.isNonVirtualRoot) {
+      segments.push(tokenGroup.name);
+    }
     segments.push(token.name);
 
     if (prefix && prefix.length > 0) {
