@@ -1,5 +1,5 @@
 @import url(colors.module.css);
-@import url(measures.module.css);
+@import url(dimensions.module.css);
 @import url(borders.module.css);
 @import url(gradients.module.css);
 @import url(shadows.module.css);

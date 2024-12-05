@@ -13,8 +13,8 @@
             "write_to": "gradients.module.css"
         },
         {
-            "invoke": "measures.pr",
-            "write_to": "measures.module.css"
+            "invoke": "dimensions.pr",
+            "write_to": "dimensions.module.css"
         },
         {
             "invoke": "shadows.pr",
