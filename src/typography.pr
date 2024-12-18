@@ -1,3 +1,4 @@
+/** these design tokens are synchronized automatically from Supernova. Do not change them manually. **/
 {[ let brand = ds.currentBrand() /]}
 {[ const allTokens = ds.tokensByType("Typography", brand.id) /]}
 {[ for token in allTokens ]}

@@ -5,24 +5,12 @@
             "write_to": "colors.module.css"
         },
         {
-            "invoke": "borders.pr",
-            "write_to": "borders.module.css"
-        },
-        {
-            "invoke": "gradients.pr",
-            "write_to": "gradients.module.css"
-        },
-        {
             "invoke": "dimensions.pr",
             "write_to": "dimensions.module.css"
         },
         {
             "invoke": "shadows.pr",
             "write_to": "shadows.module.css"
-        },
-        {
-            "invoke": "index-file.pr",
-            "write_to": "all.module.css"
         }
     ]
 }

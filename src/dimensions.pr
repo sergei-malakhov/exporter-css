@@ -1,8 +1,8 @@
 :root {
 {[ let brand = ds.currentBrand() /]}
-{[ for token in ds.tokensByType("Measure", brand.id) ]}
+{[ const tokens = ds.tokensByType("Measure", brand.id) /]}
+{[ const sortedTokens = sortTokens(tokens) /]}
+{[ for token in sortedTokens ]}
     {[ inject "rendered-token-var" context token /]}
-
-
 {[/]}
 }
