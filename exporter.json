@@ -5,7 +5,7 @@
   "author": "Sergei",
   "homepage": "https://supernova.io",
   "source_dir": "src",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "usesBrands": true,
   "config": {
     "sources": "sources.json",
