@@ -11,10 +11,21 @@ const splitOriginName = (originName) => {
 const SizesMap = {
   xsmall: 0,
   small: 1,
-  default: 2,
-  medium: 3,
+  medium: 2,
+  default: 3,
   large: 4,
   xlarge: 5,
+}
+
+const LightnessMap = {
+  lightest: 0,
+  lighter: 1,
+  light: 2,
+  medium: 3,
+  default: 4,
+  dark: 5,
+  darker: 6,
+  darkest: 7,
 }
 
   export const sortTokens = function (tokens) {
@@ -45,6 +56,14 @@ const SizesMap = {
         if (sizePostfixA != undefined && sizePostfixB != undefined) {
           return sizePostfixA - sizePostfixB
         }
+
+        const lightnessPostfixA = LightnessMap[splitA.lastPart.toLowerCase()]
+        const lightnessPostfixB = LightnessMap[splitB.lastPart.toLowerCase()]
+    
+        if (lightnessPostfixA != undefined && lightnessPostfixB != undefined) {
+          return lightnessPostfixA - lightnessPostfixB
+        }
+
         return splitA.lastPart.localeCompare(splitB.lastPart)
       }
       return 0
