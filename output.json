@@ -7,10 +7,6 @@
         {
             "invoke": "dimensions.pr",
             "write_to": "dimensions.module.css"
-        },
-        {
-            "invoke": "shadows.pr",
-            "write_to": "shadows.module.css"
         }
     ]
 }

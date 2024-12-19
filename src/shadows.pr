@@ -1,7 +1,9 @@
 /** these design tokens are synchronized automatically from Supernova. Do not change them manually. **/
 :root {
 {[ let brand = ds.currentBrand() /]}
-{[ for token in ds.tokensByType("Shadow", brand.id) ]}
+{[ const tokens = ds.tokensByType("Shadow", brand.id) /]}
+{[ const sortedTokens = sortTokens(tokens) /]}
+{[ for token in sortedTokens ]}
 {[ if (!token.isVirtual) ]}
     {[ inject "rendered-token-var" context token /]}
 

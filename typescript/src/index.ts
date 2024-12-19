@@ -1,3 +1,10 @@
+import { sortTokens } from './sorter'
+
+Pulsar.registerFunction(
+  "sortTokens",
+  sortTokens
+);
+
 /**
  * Convert group name, token name and possible prefix into camelCased string, joining everything together
  */
@@ -32,13 +39,6 @@ Pulsar.registerFunction(
     }
 
     return sentence;
-  }
-);
-
-Pulsar.registerFunction(
-  "sortTokens",
-  function (tokens) {
-    return tokens.sort((a, b) => (a.origin?.name || '').localeCompare(b.origin?.name))
   }
 );
 
